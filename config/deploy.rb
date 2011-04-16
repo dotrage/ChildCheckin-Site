@@ -16,7 +16,7 @@ role :app, "#{server_ip}"
 #This allows Capistrano to prompt for passwords
 default_run_options[:pty] = true
 #The following lines tell Capistrano where to deploy the project
-set :deploy_to, "/var/www/vhosts/functionized.com/subdomains/cci.dev" # defaults to "/u/apps/#{application}"
+set :deploy_to, "/var/www/vhosts/rollcalled.com/" # defaults to "/u/apps/#{application}"
 set :current_path, "#{deploy_to}/html"
 set :releases_path, "#{deploy_to}/releases/"
 set :shared_path, "#{deploy_to}/shared/"
