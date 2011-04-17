@@ -25,10 +25,22 @@
 		
 		$from = "615-685-0239";
 		$to = $array['to'];
-		$twilio->request("/2010-04-01/Accounts/".TWILIO_ACCOUNT_SID."/Calls.json?From=".$from."&To=".$to."&Url=http://app.rollcalled.com/twilio/voiceout.php?data=sid|".$array['student_id'].",fname|".$array['fname'].",cname|".$array['cname']);		
+		//$result = $twilio->request("/2010-04-01/Accounts/".TWILIO_ACCOUNT_SID."/Calls.json?From=".$from."&To=".$to."&Url=http://app.rollcalled.com/twilio/voiceout.php");
+		
+		
+		$data = array(
+			"From" => $from,
+			"To" => $to,
+			"Url" => "http://app.rollcalled.com/twilio/voiceout.php?student_id=".$array['student_id']."&fname=".$array['fname']."&cname=".$array['cname'],
+			"IfMachine" => "Hangup",
+			"Timeout" => 30
+		);
+		
+		$twilio->request("/2010-04-01/Accounts/".TWILIO_ACCOUNT_SID."/Calls.json", "POST", $data);				
+		print_r($result);
 	}	
 	
-	if (!empty($_POST['send'])){
+	if (empty($_POST['send'])){
 		//send_sms(array("to"=>"615-364-8615","fname"=>"Chris","cname"=>"Freshman English","student_id"=>"32"));
 		send_voice(array("to"=>"615-364-8615","fname"=>"Chris","cname"=>"Freshman English","student_id"=>"32"));
 	}
