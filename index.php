@@ -159,6 +159,7 @@
   
   <script>
     $("#class_field").live("change",function(){
+    	$.mobile.pageLoading();
 		location = "?cid="+$("#class_field").val();
     });
 
