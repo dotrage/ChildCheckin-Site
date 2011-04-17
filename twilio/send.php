@@ -25,7 +25,7 @@
 		
 		$from = "615-685-0239";
 		$to = $array['to'];
-		$twilio->request("/2010-04-01/Accounts/".TWILIO_ACCOUNT_SID."/Calls.json?From=".$from."&To=".$to."&Url=http://rollcalled.com/twilio/voiceout.php?data=sid|".$array['student_id'].",fname|".$array['fname'].",cname|".$array['cname']);		
+		$twilio->request("/2010-04-01/Accounts/".TWILIO_ACCOUNT_SID."/Calls.json?From=".$from."&To=".$to."&Url=http://app.rollcalled.com/twilio/voiceout.php?data=sid|".$array['student_id'].",fname|".$array['fname'].",cname|".$array['cname']);		
 	}	
 	
 	if (!empty($_POST['send'])){
