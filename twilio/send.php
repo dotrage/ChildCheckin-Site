@@ -25,12 +25,11 @@
 		
 		$from = "615-685-0239";
 		$to = $array['to'];
-		error_log("hammer");
-		$twilio->request("/2010-04-01/Accounts/".TWILIO_ACCOUNT_SID."/Calls.json?From=".$from."&To=".$to."&Url=http://rollcalled.com/twilio/voiceout.php?data=sid=".$array['student_id']."|fname=".$array['fname']."|cname=".$array['cname']);		
+		$twilio->request("/2010-04-01/Accounts/".TWILIO_ACCOUNT_SID."/Calls.json?From=".$from."&To=".$to."&Url=http://rollcalled.com/twilio/voiceout.php?data=sid|".$array['student_id'].",fname|".$array['fname'].",cname|".$array['cname']);		
 	}	
 	
 	if (!empty($_POST['send'])){
-		//send_sms(array("to"=>"6153648615","fname"=>"Chris","cname"=>"Freshman English","student_id"=>"32"));
-		send_voice(array("to"=>"6153648615","fname"=>"Chris","cname"=>"Freshman English","student_id"=>"32"));
+		//send_sms(array("to"=>"615-364-8615","fname"=>"Chris","cname"=>"Freshman English","student_id"=>"32"));
+		send_voice(array("to"=>"615-364-8615","fname"=>"Chris","cname"=>"Freshman English","student_id"=>"32"));
 	}
 ?>
