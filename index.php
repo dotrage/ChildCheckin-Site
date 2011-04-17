@@ -7,6 +7,7 @@
 		curl_setopt($curl,CURLOPT_POSTFIELDS, "send=1");
 		
 		$result = curl_exec($curl);
+		print_r($result);
 	}
 
 	if (!empty($_GET['cid'])){

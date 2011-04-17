@@ -31,7 +31,7 @@
 		$data = array(
 			"From" => $from,
 			"To" => $to,
-			"Url" => "http://app.rollcalled.com/twilio/voiceout.php?student_id=".$array['student_id']."&fname=".$array['fname']."&cname=".$array['cname'],
+			"Url" => "http://app.rollcalled.com/twilio/voiceout.php?student_id=".$array['student_id']."&fname=".$array['fname']."&cname=".urlencode($array['cname']),
 			"IfMachine" => "Hangup",
 			"Timeout" => 30
 		);
