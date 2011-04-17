@@ -89,8 +89,6 @@
 <meta http-equiv="cleartype" content="on">
 <link rel="stylesheet"  href="/css/jquery.mobile-1.0a4.1.min.css" /> 
 <link rel="stylesheet" href="/css/style.css" /> 
-<script type="text/javascript" src="/js/jquery-1.5.min.js"></script> 
-<script type="text/javascript" src="/js/jquery.mobile-1.0a4.1.min.js"></script> 
 </head>
 
 <body>
@@ -155,6 +153,9 @@
   	<!-- ====== confirmation content ends here ===== -->  
   
   </div> 
+  
+  <script type="text/javascript" src="/js/jquery-1.5.min.js"></script> 
+  <script type="text/javascript" src="/js/jquery.mobile-1.0a4.1.min.js"></script> 
   
   <script>
     $("#class_field").live("change",function(){
