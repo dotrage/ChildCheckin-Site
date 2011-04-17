@@ -18,8 +18,7 @@
 			$submitted = 1;			
 			
 			//Send SMS/Voice
-			send_alert();			
-						
+			send_alert();									
 		}
 		
 		$array = array(

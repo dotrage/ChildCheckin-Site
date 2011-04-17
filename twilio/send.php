@@ -13,7 +13,7 @@
 		$message = array(
 			"From" => $from,
 			"To" => $to,
-			"Body" => $array['fname']." was reported as absent in ".$array['cname']." class today.  Are you aware of this?  (Yes/No)"
+			"Body" => "School Alert: ".$array['fname']." was reported as absent in ".$array['cname']." class today.  Are you aware of this?  (Yes/No)"
 		);			
 		
 		$twilio->request("/2010-04-01/Accounts/".TWILIO_ACCOUNT_SID."/SMS/Messages.json", "POST", $message);
