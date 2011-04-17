@@ -40,113 +40,87 @@
 		error_log(http_build_query($result));				
 	}	
 	
-	/*
-	 * 
-	 * array(
-	"student_id" => 1,
-	"fname" => "Sid",
-	"lname" => "Smith",
-	"cname" => "English",
-	"phone" => "6154158558"
-),
-array(
-	"student_id" => 3,
-	"fname" => "Matthew",
-	"lname" => "Rogers",
-	"cname" => "English",
-	"phone" => "6153979595"
-),
-array(
-	"student_id" => 4,
-	"fname" => "Robert",
-	"lname" => "Hartline",
-	"cname" => "English",
-	"phone" => "6153946699"
-),
-array(
-	"student_id" => 6,
-	"fname" => "Justin",
-	"lname" => "Davis",
-	"cname" => "English",
-	"phone" => "8658052410"
-),
-array(
-	"student_id" => 8,
-	"fname" => "Shane",
-	"lname" => "Stenner",
-	"cname" => "English",
-	"phone" => "4109638130"
-),
-array(
-	"student_id" => 10,
-	"fname" => "Nicholas ",
-	"lname" => "Holland",
-	"cname" => "English",
-	"phone" => "6154225205"
-),
-array(
-	"student_id" => 13,
-	"fname" => "Michael",
-	"lname" => "Summar",
-	"cname" => "English",
-	"phone" => "6152607704"
-),
-array(
-	"student_id" => 16,
-	"fname" => "Matt",
-	"lname" => "Kenigson",
-	"cname" => "English",
-	"phone" => "6156244040"
-),
-array(
-	"student_id" => 19,
-	"fname" => "Jake",
-	"lname" => "Robinson",
-	"cname" => "English",
-	"phone" => "6154245019"
-),
-array(
-	"student_id" => 21,
-	"fname" => "Ben",
-	"lname" => "Stucki",
-	"cname" => "English",
-	"phone" => "6159732406"
-),
-	 */
-	
 	if (!empty($_POST['send'])){
 		$array = array(
 			array(
-				"student_id" => "1",
-				"fname" => "Yvette",
-				"lname" => "",
+				"student_id" => 1,
+				"fname" => "Sid",
+				"lname" => "Smith",
 				"cname" => "English",
-				"phone" => "6154823299",
+				"phone" => "6154158558",
+				"type" => "voice"
+			),
+			array(
+				"student_id" => 3,
+				"fname" => "Matthew",
+				"lname" => "Rogers",
+				"cname" => "English",
+				"phone" => "6153979595",
 				"type" => "sms"
 			),
 			array(
-				"student_id" => "1",
-				"fname" => "Tiffany",
-				"lname" => "",
+				"student_id" => 4,
+				"fname" => "Robert",
+				"lname" => "Hartline",
 				"cname" => "English",
-				"phone" => "6154737742",
-				"type" => "voice"
-			),			
-			array(
-				"student_id" => "3",
-				"fname" => "Phil",
-				"lname" => "",
-				"cname" => "English",
-				"phone" => "6155040239",
+				"phone" => "6153946699",
 				"type" => "sms"
-			),	
+			),
 			array(
-				"student_id" => "4",
-				"fname" => "Chris",
-				"lname" => "",
+				"student_id" => 6,
+				"fname" => "Justin",
+				"lname" => "Davis",
 				"cname" => "English",
-				"phone" => "6153648615",
+				"phone" => "8658052410",
+				"type" => "sms"
+			),
+			array(
+				"student_id" => 8,
+				"fname" => "Shane",
+				"lname" => "Stenner",
+				"cname" => "English",
+				"phone" => "4109638130",
 				"type" => "voice"
+			),
+			array(
+				"student_id" => 10,
+				"fname" => "Nicholas ",
+				"lname" => "Holland",
+				"cname" => "English",
+				"phone" => "6154225205",
+				"type" => "sms"
+			),
+			array(
+				"student_id" => 13,
+				"fname" => "Michael",
+				"lname" => "Summar",
+				"cname" => "English",
+				"phone" => "6152607704",
+				"type" => "voice"
+			),
+			array(
+				"student_id" => 16,
+				"fname" => "Matt",
+				"lname" => "Kenigson",
+				"cname" => "English",
+				"phone" => "6156244040",
+				"type" => "voice"
+			),
+			array(
+				"student_id" => 19,
+				"fname" => "Jake",
+				"lname" => "Robinson",
+				"cname" => "English",
+				"phone" => "6154245019",
+				"type" => "sms"
+			),
+			array(
+				"student_id" => 21,
+				"fname" => "Ben",
+				"lname" => "Stucki",
+				"cname" => "English",
+				"phone" => "6159732406",
+				"type" => "sms"
 			)
 		);
 		
