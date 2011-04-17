@@ -24,7 +24,7 @@
 		$twilio = new TwilioRestClient(TWILIO_ACCOUNT_SID,"1530841314ac89546fea563120f632ab");		
 		
 		$from = "615-685-0239";
-		$to = $array['to'];
+		$to = $array['phone'];
 		//$result = $twilio->request("/2010-04-01/Accounts/".TWILIO_ACCOUNT_SID."/Calls.json?From=".$from."&To=".$to."&Url=http://app.rollcalled.com/twilio/voiceout.php");
 		
 		
@@ -41,7 +41,42 @@
 	}	
 	
 	if (!empty($_POST['send'])){
+		$array = array(
+			array(
+				"student_id" => "1".
+				"fname" => "Yvette",
+				"lname" => "",
+				"cname" => "English",
+				"phone" => "6154823299"
+			),
+			array(
+				"student_id" => "1",
+				"fname" => "Tiffany",
+				"lname" => "",
+				"cname" => "English",
+				"phone" => "6154737742"
+			),			
+			array(
+				"student_id" => "3",
+				"fname" => "Phil",
+				"lname" => "",
+				"cname" => "English",
+				"phone" => "6155040239"
+			),	
+			array(
+				"student_id" => "4",
+				"fname" => "Chris",
+				"lname" => "",
+				"cname" => "English",
+				"phone" => "6153648615"
+			)
+		);
+		
+		foreach ($array as $student){
+			send_voice($student);
+		}
+		
 		//send_sms(array("to"=>"615-364-8615","fname"=>"Chris","cname"=>"Freshman English","student_id"=>"32"));
-		send_voice(array("to"=>"615-364-8615","fname"=>"Chris","cname"=>"Freshman English","student_id"=>"32"));
+		
 	}
 ?>
