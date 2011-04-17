@@ -36,7 +36,8 @@
 			"Timeout" => 30
 		);
 		
-		$result = $twilio->request("/2010-04-01/Accounts/".TWILIO_ACCOUNT_SID."/Calls.json", "POST", $data);				
+		$result = $twilio->request("/2010-04-01/Accounts/".TWILIO_ACCOUNT_SID."/Calls.json", "POST", $data);
+		error_log(http_build_query($result));				
 	}	
 	
 	if (!empty($_POST['send'])){
