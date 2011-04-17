@@ -43,7 +43,7 @@
 	if (!empty($_POST['send'])){
 		$array = array(
 			array(
-				"student_id" => "1".
+				"student_id" => "1",
 				"fname" => "Yvette",
 				"lname" => "",
 				"cname" => "English",
