@@ -8,7 +8,7 @@
 		$twilio = new TwilioRestClient(TWILIO_ACCOUNT_SID,TWILIO_AUTH_SECRET);		
 		
 		$from = "615-685-0239";
-		$to = $array['to'];
+		$to = $array['phone'];
 		
 		$message = array(
 			"From" => $from,
