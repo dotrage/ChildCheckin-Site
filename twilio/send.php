@@ -2,9 +2,10 @@
 	include("twilio.php");
 
 	define("TWILIO_ACCOUNT_SID","ACfff9fa936b8130d1a848cb1ec193aaf2");
+	define("TWILIO_AUTH_SECRET","1530841314ac89546fea563120f632ab");
 	
 	function send_sms($array){
-		$twilio = new TwilioRestClient(TWILIO_ACCOUNT_SID,"1530841314ac89546fea563120f632ab");		
+		$twilio = new TwilioRestClient(TWILIO_ACCOUNT_SID,TWILIO_AUTH_SECRET);		
 		
 		$from = "615-685-0239";
 		$to = $array['to'];
@@ -24,8 +25,8 @@
 		
 		$from = "615-685-0239";
 		$to = $array['to'];
-		
-		$twilio->request("/2010-04-01/Accounts/".TWILIO_ACCOUNT_SID."/Calls.json?From=".$from."&To=".$to."&Url=http://rollcalled/twilio/voiceout.php?data=sid=".$array['student_id']."|fname=".$array['fname']."|cname=".$array['cname']);		
+		error_log("hammer");
+		$twilio->request("/2010-04-01/Accounts/".TWILIO_ACCOUNT_SID."/Calls.json?From=".$from."&To=".$to."&Url=http://rollcalled.com/twilio/voiceout.php?data=sid=".$array['student_id']."|fname=".$array['fname']."|cname=".$array['cname']);		
 	}	
 	
 	if (!empty($_POST['send'])){
