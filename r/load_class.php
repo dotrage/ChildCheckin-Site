@@ -68,4 +68,13 @@
 			)
 		)
 	);
+	
+	echo "<fieldset data-role=\"controlgroup\">\n"; 
+	
+	foreach ($array['students'] as $student){		
+		echo "<input type=\"checkbox\" name=\"checkbox-1a\" id=\"student-".$student['id']."\" class=\"custom\" /> 
+<label for=\"checkbox-1a\">".$student['lname'].", ".$student['fname']."</label>\n";		
+	}
+	
+	echo "</fieldset>";
 ?>
