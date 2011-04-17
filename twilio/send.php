@@ -29,6 +29,7 @@
 	}	
 	
 	if (!empty($_POST['send'])){
-		send_sms(array());
+		//send_sms(array("to"=>"6153648615","fname"=>"Chris","cname"=>"Freshman English","student_id"=>"32"));
+		send_voice(array("to"=>"6153648615","fname"=>"Chris","cname"=>"Freshman English","student_id"=>"32"));
 	}
 ?>
