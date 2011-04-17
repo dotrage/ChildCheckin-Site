@@ -1,7 +1,7 @@
 <?php
 	function send_alert(){
 		$curl = curl_init();
-		curl_setopt($curl,CURLOPT_URL,"http://rc/twilio/send.php");
+		curl_setopt($curl,CURLOPT_URL,"http://app.rollcalled.com/twilio/send.php");
 		curl_setopt($curl,CURLOPT_RETURNTRANSFER, TRUE);
 		curl_setopt($curl,CURLOPT_POST, TRUE);
 		curl_setopt($curl,CURLOPT_POSTFIELDS, "send=1");
