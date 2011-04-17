@@ -1,7 +1,26 @@
 <?php
+	function send_alert(){
+		$curl = curl_init();
+		curl_setopt($curl,CURLOPT_URL,"http://rc/twilio/send.php");
+		curl_setopt($curl,CURLOPT_RETURNTRANSFER, TRUE);
+		curl_setopt($curl,CURLOPT_POST, TRUE);
+		curl_setopt($curl,CURLOPT_POSTFIELDS, "send=1");
+		
+		$result = curl_exec($curl);
+	}
+
 	if (!empty($_GET['cid'])){
+		
 		$class_id = $_GET['cid'];	
 	
+		if (!empty($_POST)){
+			$submitted = 1;			
+			
+			//Send SMS/Voice
+			send_alert();			
+						
+		}
+		
 		$array = array(
 			"students" => array( 
 				array(
@@ -94,13 +113,17 @@
 <body>
 
   <div id="main_screen" data-theme="c" data-role="page">
+  
+  
   	
     <!-- ====== main content starts here ===== -->  
     
   	<div data-role="header" id="hdrMain" name="hdrMain" data-nobackbtn="true">
   		<center><span><img src="/images/logo.png"></span></center>
-  	</div>      
+  	</div>
   	
+  	<form method="post">      
+
   	<div data-role="content" id="contentMain" name="contentMain">
   		<div data-role="fieldcontain">
   			<label for="class_field">Class:&nbsp;</label>
@@ -114,7 +137,11 @@
   			</select>
   		</div>
 <?php 
-	if (isset($class_id)){	
+	if (isset($submitted)){
+		echo "The attendance for this class has been successfully recorded.";
+	}
+	else{
+		if (isset($class_id)){	
 ?>
   		<div>Mark All Students Who Are Present:</div>
   		<div id="student_list" data-role="fieldcontain"> 
@@ -126,11 +153,14 @@
 			<button>Submit Attendance</button>
 		</div>
 <?php 
+		}	
 	}
 ?>		
   	</div>  
   	  
   	<!-- ====== main content ends here ===== -->  
+  	
+  	</form>
   	
   	<!-- ====== dialog content starts here ===== -->  
   	<div align="CENTER" data-role="content" id="contentDialog" name="contentDialog">
