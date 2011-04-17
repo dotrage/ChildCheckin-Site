@@ -74,6 +74,8 @@
 		
 		$list = "";
 		
+		$setclassvalue = "$(\"#class_field\").val('".$class_id."')";
+		
 		foreach ($array['students'] as $student){
 			$list .= "<input type=\"checkbox\" name=\"checkbox-1a\" id=\"student-".$student['id']."\" class=\"custom\" /> 
 <label for=\"student-".$student['id']."\">".$student['lname'].", ".$student['fname']."</label>\n";								
@@ -158,6 +160,8 @@
     $("#class_field").live("change",function(){
 		location = "?cid="+$("#class_field").val();
     });
+
+    <?php echo $setclassvalue; ?>
     
     $("#contentDialog").hide();
     $("#contentTransition").hide();
